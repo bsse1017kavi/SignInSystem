@@ -42,7 +42,9 @@
 
             else
             {
-                header("Location: homePage.html");
+                session_start();
+                $_SESSION['isSignedIn'] = true;
+                header("Location: homePage.php");
             }
 
             mysqli_close($conn);
