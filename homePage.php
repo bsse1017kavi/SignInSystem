@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!$_SESSION['isSignedIn'] || $_SESSION['isSignedIn']==null)
+    if(!$_SESSION['isSignedIn'] || !(isset($_SESSION['isSignedIn'])))/*$_SESSION['isSignedIn']==null*/
     {
         header('Location: welcome.html');
     }
